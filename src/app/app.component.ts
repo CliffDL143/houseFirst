@@ -11,6 +11,8 @@ import { Component } from '@angular/core';
                     <li><a [routerLink]="['/welcome']">Home</a></li>
                     <li><a [routerLink]="['/products']">Product List</a></li>
                     <li><a [routerLink]="['/productEdit/0']">Add Product</a></li>
+                    <li><a [routerLink]="['/manuals']">Manuals List</a></li>
+                    <li><a [routerLink]="['/manualEdit/0']">Add Manual</a></li>
                 </ul>
             </div>
         </nav>
@@ -21,5 +23,5 @@ import { Component } from '@angular/core';
      `
 })
 export class AppComponent {
-    pageTitle: string = 'Acme Product Management';
+    pageTitle: string = 'Cliff Home Management';
 }

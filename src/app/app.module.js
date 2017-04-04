@@ -13,6 +13,7 @@ var app_component_1 = require("./app.component");
 var welcome_component_1 = require("./home/welcome.component");
 /* Feature Modules */
 var product_module_1 = require("./products/product.module");
+var manual_module_1 = require("./manuals/manual.module");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -28,7 +29,8 @@ AppModule = __decorate([
                 { path: '', redirectTo: 'welcome', pathMatch: 'full' },
                 { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
             ]),
-            product_module_1.ProductModule
+            product_module_1.ProductModule,
+            manual_module_1.ManualModule
         ],
         declarations: [
             app_component_1.AppComponent,
