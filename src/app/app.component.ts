@@ -8,9 +8,18 @@ import { Component } from '@angular/core';
             <div class='container-fluid'>
                 <a class='navbar-brand'>{{pageTitle}}</a>
                 <ul class='nav navbar-nav'>
-                    <li><a [routerLink]="['/welcome']">Home</a></li>
-
-
+                    <li class="btn btn-primary">
+                                     
+                    <a [routerLink]="['/welcome']">Home</a></li>
+                    <li class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Library
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Books</a></li>
+                            <li><a href="#">Music</a></li>
+                            <li><a href="#">Films</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </nav>

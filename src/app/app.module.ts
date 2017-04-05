@@ -6,6 +6,8 @@ import { RouterModule } from '@angular/router';
 import { AppComponent }  from './app.component';
 import { WelcomeComponent } from './startup/welcome.component';
 
+import { AlertModule } from 'ng2-bootstrap';
+
 /* Feature Modules */
 //import { ProductModule } from './products/product.module';
 //import { ManualModule } from './manuals/manual.module';
