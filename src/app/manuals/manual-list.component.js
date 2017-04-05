@@ -35,7 +35,8 @@ ManualListComponent = __decorate([
         templateUrl: 'app/manuals/manual-list.component.html',
         styleUrls: ['app/manuals/manual-list.component.css']
     }),
-    __metadata("design:paramtypes", [manual_service_1.ManualService])
+    __metadata("design:paramtypes", [typeof (_a = typeof manual_service_1.ManualService !== "undefined" && manual_service_1.ManualService) === "function" && _a || Object])
 ], ManualListComponent);
 exports.ManualListComponent = ManualListComponent;
+var _a;
 //# sourceMappingURL=manual-list.component.js.map

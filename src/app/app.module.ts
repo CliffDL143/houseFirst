@@ -4,11 +4,11 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent }  from './app.component';
-import { WelcomeComponent } from './home/welcome.component';
+import { WelcomeComponent } from './startup/welcome.component';
 
 /* Feature Modules */
 import { ProductModule } from './products/product.module';
-import { ManualModule } from './manuals/manual.module';
+//import { ManualModule } from './manuals/manual.module';
 
 @NgModule({
   imports: [
@@ -20,7 +20,7 @@ import { ManualModule } from './manuals/manual.module';
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
     ]),
     ProductModule,
-    ManualModule
+    //ManualModule
   ],
   declarations: [
     AppComponent,

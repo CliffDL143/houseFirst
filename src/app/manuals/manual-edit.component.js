@@ -154,8 +154,8 @@ ManualEditComponent = __decorate([
     }),
     __metadata("design:paramtypes", [forms_1.FormBuilder,
         router_1.ActivatedRoute,
-        router_1.Router,
-        manual_service_1.ManualService])
+        router_1.Router, typeof (_a = typeof manual_service_1.ManualService !== "undefined" && manual_service_1.ManualService) === "function" && _a || Object])
 ], ManualEditComponent);
 exports.ManualEditComponent = ManualEditComponent;
+var _a;
 //# sourceMappingURL=manual-edit.component.js.map

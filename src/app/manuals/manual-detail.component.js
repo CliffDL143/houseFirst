@@ -45,8 +45,8 @@ ManualDetailComponent = __decorate([
         templateUrl: 'app/manuals/manual-detail.component.html'
     }),
     __metadata("design:paramtypes", [router_1.ActivatedRoute,
-        router_1.Router,
-        manual_service_1.ManualService])
+        router_1.Router, typeof (_a = typeof manual_service_1.ManualService !== "undefined" && manual_service_1.ManualService) === "function" && _a || Object])
 ], ManualDetailComponent);
 exports.ManualDetailComponent = ManualDetailComponent;
+var _a;
 //# sourceMappingURL=manual-detail.component.js.map
