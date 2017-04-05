@@ -8,9 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/http");
-var router_1 = require("@angular/router");
 var app_component_1 = require("./app.component");
-var welcome_component_1 = require("./startup/welcome.component");
+// import { WelcomeComponent } from './startup/welcome.component';
+var manual_list_component_1 = require("./equip/manual-list.component");
+var tool_list_component_1 = require("./equip/tool-list.component");
+//import { AlertModule } from 'ng2-bootstrap';
+//import { BsDropdownModule } from 'ng2-bootstrap';
 /* Feature Modules */
 //import { ProductModule } from './products/product.module';
 //import { ManualModule } from './manuals/manual.module';
@@ -24,15 +27,12 @@ AppModule = __decorate([
         imports: [
             platform_browser_1.BrowserModule,
             http_1.HttpModule,
-            router_1.RouterModule.forRoot([
-                { path: 'welcome', component: welcome_component_1.WelcomeComponent },
-                { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-                { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
-            ]),
         ],
         declarations: [
             app_component_1.AppComponent,
-            welcome_component_1.WelcomeComponent
+            //  WelcomeComponent,
+            manual_list_component_1.ManualListComponent,
+            tool_list_component_1.ToolListComponent
         ],
         bootstrap: [app_component_1.AppComponent]
     })

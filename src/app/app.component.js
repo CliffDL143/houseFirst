@@ -6,6 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
+//import { HtmlDropdownComponent } from "./components/html-dropdown.component";
 var AppComponent = (function () {
     function AppComponent() {
         this.pageTitle = 'Cliff Home Management';
@@ -15,16 +16,74 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'home-app',
-        template: "\n    <div>\n        <nav class='navbar navbar-default'>\n            <div class='container-fluid'>\n                <a class='navbar-brand'>{{pageTitle}}</a>\n                <ul class='nav navbar-nav'>\n                    <li class=\"btn btn-primary\">\n                                     \n                    <a [routerLink]=\"['/welcome']\">Home</a></li>\n                    <li class=\"dropdown\">\n                        <button class=\"btn btn-primary dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">Library\n                        <span class=\"caret\"></span></button>\n                        <ul class=\"dropdown-menu\">\n                            <li><a href=\"#\">Books</a></li>\n                            <li><a href=\"#\">Music</a></li>\n                            <li><a href=\"#\">Films</a></li>\n                        </ul>\n                    </li>\n                </ul>\n            </div>\n        </nav>\n        <div class='container'>\n            <router-outlet></router-outlet>\n        </div>\n     </div>\n     "
+        template: "\n        <div><h1>{{pageTitle}}</h1>\n            <home-manuals></home-manuals>\n             <home-tools></home-tools>           \n        </div>\n\n     "
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
 /*
+
+
+    <div>
+        <nav class='navbar navbar-default'>
+            <div class='container-fluid'>
+                <a class='navbar-brand'>{{pageTitle}}</a>
+                <ul class='nav navbar-nav'>
+                    <li class="btn btn-primary" style="height: 45px; color: white;"><a [routerLink]="['/welcome']">Home</a></li>
+                    <li><a [routerLink]="['/manuals']">Manuals List</a></li>
+               
+
+               
+               
+               
+                </ul>
+            </div>
+        </nav>
+        <div class='container'>
+            <router-outlet></router-outlet>
+        </div>
+     </div>
+
+
                     <li><a [routerLink]="['/products']">Product List</a></li>
                     <li><a [routerLink]="['/productEdit/0']">Add Product</a></li>
 
 
                     <li><a [routerLink]="['/manuals']">Manuals List</a></li>
                     <li><a [routerLink]="['/manualEdit/0']">Add Manual</a></li>
+
+                    <li class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Library
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="menuitem"><a href="#">Books</a></li>
+                            <li role="menuitem"><a href="#">Music</a></li>
+                            <li class="divider dropdown-divider"></li>
+                            <li role="menuitem"><a href="#">Films</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">House
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="menuitem"><a href="#">Tools</a></li>
+                            <li role="menuitem"><a href="#">Manuals</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Food
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="menuitem"><a href="#">Foods</a></li>
+                            <li role="menuitem"><a href="#">Recipes</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Background
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="menuitem"><a href="#">Locations</a></li>
+                        </ul>
+                    </li>
+
 */
 //# sourceMappingURL=app.component.js.map
