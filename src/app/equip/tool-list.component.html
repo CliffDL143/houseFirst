@@ -1,5 +1,5 @@
 <div class="panel panel-primary">
-    <div class="panel-heading">Tools</div>
+    <div class="panel-heading">{{pageTitle}}</div>
     <!-- Filter the Tools   -->
     <div class='panel-body'>
         <div class='row'>
@@ -14,7 +14,9 @@
             </div>
         </div>
         <div class='table-responsive'>
-            <table class='table'>
+            <table class='table'
+                 *ngIf='tools && tools.length'               
+            >
                 <thead>
                     <tr>
                         <th>id</th>
@@ -28,6 +30,16 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <tr *ngFor='let tool of tools'  > 
+                        <td>{{ tool.id }} </td>
+                        <td>{{ tool.item }} </td>
+                        <td>{{ tool.location }}  </td>                      
+                        <td>{{ tool.qty }} </td>
+                        <td>{{ tool.size }} </td>
+                        <td>{{ tool.partOfSet }} </td>
+                        <td>{{ tool.dateBought }}  </td>  
+                         <td>{{ tool.comment }}  </td>                                                                                                            
+                    </tr>
                 </tbody>
             </table>
 

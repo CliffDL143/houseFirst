@@ -1,5 +1,5 @@
 <div class="panel panel-primary">
-    <div class="panel-heading">Manuals</div>
+    <div class="panel-heading">{{pageTitle}}</div>
     <!-- Filter the Manuals   -->
     <div class='panel-body'>
         <div class='row'>
@@ -14,7 +14,9 @@
             </div>
         </div>
         <div class='table-responsive'>
-            <table class='table'>
+            <table class='table'
+                *ngIf='manuals && manuals.length'
+            >
                 <thead>
                     <tr>
                         <th>id</th>
@@ -28,6 +30,16 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <tr *ngFor='let manual of manuals'  > 
+                        <td>{{ manual.id }} </td>
+                        <td>{{ manual.fileDate }} </td>
+                        <td>{{ manual.itemDescription }}  </td>                      
+                        <td>{{ manual.itemModel }} </td>
+                        <td>{{ manual.itemManufacturer }} </td>
+                        <td>{{ manual.fileLocation }} </td>
+                        <td>{{ manual.equipLocation }}  </td>  
+                        <td>{{ manual.modelUrl }}  </td>                                                                                                            
+                    </tr>
                 </tbody>
             </table>
 
