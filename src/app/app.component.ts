@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'pm-app',
+    selector: 'home-app',
     template: `
     <div>
         <nav class='navbar navbar-default'>
@@ -9,8 +9,7 @@ import { Component } from '@angular/core';
                 <a class='navbar-brand'>{{pageTitle}}</a>
                 <ul class='nav navbar-nav'>
                     <li><a [routerLink]="['/welcome']">Home</a></li>
-                    <li><a [routerLink]="['/products']">Product List</a></li>
-                    <li><a [routerLink]="['/productEdit/0']">Add Product</a></li>
+
 
                 </ul>
             </div>
@@ -25,6 +24,11 @@ export class AppComponent {
     pageTitle: string = 'Cliff Home Management';
 }
 
-/*                    <li><a [routerLink]="['/manuals']">Manuals List</a></li>
+/*                   
+                    <li><a [routerLink]="['/products']">Product List</a></li>
+                    <li><a [routerLink]="['/productEdit/0']">Add Product</a></li>
+
+
+                    <li><a [routerLink]="['/manuals']">Manuals List</a></li>
                     <li><a [routerLink]="['/manualEdit/0']">Add Manual</a></li>
 */

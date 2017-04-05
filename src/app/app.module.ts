@@ -7,7 +7,7 @@ import { AppComponent }  from './app.component';
 import { WelcomeComponent } from './startup/welcome.component';
 
 /* Feature Modules */
-import { ProductModule } from './products/product.module';
+//import { ProductModule } from './products/product.module';
 //import { ManualModule } from './manuals/manual.module';
 
 @NgModule({
@@ -19,8 +19,8 @@ import { ProductModule } from './products/product.module';
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
     ]),
-    ProductModule,
-    //ManualModule
+    //ProductModule,
+   // ManualModule
   ],
   declarations: [
     AppComponent,
