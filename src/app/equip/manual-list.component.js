@@ -9,6 +9,7 @@ var core_1 = require("@angular/core");
 var ManualListComponent = (function () {
     function ManualListComponent() {
         this.pageTitle = 'Manuals List';
+        this.listFilter = '';
         this.manuals = [
             {
                 id: 1,
@@ -16,7 +17,7 @@ var ManualListComponent = (function () {
                 itemDescription: 'ProSafe Gigabit switch',
                 itemModel: 'GS105Ev2',
                 itemManufacturer: 'Netgear',
-                fileLocation: 1,
+                fileLocation: 'Desk3_F01',
                 equipLocation: 'Living Room',
                 modelUrl: 'https://www.netgear.com/support/product/GS105Ev2?cid=wmt_netgear_organic'
             },
@@ -26,7 +27,7 @@ var ManualListComponent = (function () {
                 itemDescription: 'ProSafe Gigabit switch Quick set up',
                 itemModel: 'GS105Ev2',
                 itemManufacturer: 'Netgear',
-                fileLocation: 1,
+                fileLocation: 'Desk3_F01',
                 equipLocation: 'Living Room',
                 modelUrl: 'https://www.netgear.com/support/product/GS105Ev2?cid=wmt_netgear_organic'
             },
@@ -36,18 +37,23 @@ var ManualListComponent = (function () {
                 itemDescription: 'ProSafe Gigabit switch CD',
                 itemModel: 'GS105Ev2',
                 itemManufacturer: 'Netgear',
-                fileLocation: 1,
+                fileLocation: 'Desk3_F01',
                 equipLocation: 'Living Room',
                 modelUrl: 'https://www.netgear.com/support/product/GS105Ev2?cid=wmt_netgear_organic'
             }
         ];
     }
+    ManualListComponent.prototype.ngOnInit = function () {
+        console.log('In Oninit');
+    };
     return ManualListComponent;
 }());
 ManualListComponent = __decorate([
     core_1.Component({
         selector: 'home-manuals',
-        templateUrl: 'app/equip/manual-list.component.html'
+        //moduleId: module.id, absolute path is required for css
+        templateUrl: 'app/equip/manual-list.component.html',
+        styleUrls: ['app/shared/list.component.css']
     })
 ], ManualListComponent);
 exports.ManualListComponent = ManualListComponent;

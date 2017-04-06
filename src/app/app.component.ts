@@ -8,12 +8,15 @@ import { Component } from '@angular/core';
 
     template: `
         <div><h1>{{pageTitle}}</h1>
-            <home-manuals></home-manuals>
-             <home-tools></home-tools>           
+            
+            <home-tools></home-tools>           
         </div>
 
      `
 })
+
+//<home-manuals></home-manuals>
+
 export class AppComponent {
     pageTitle: string = 'Cliff Home Management';
 }

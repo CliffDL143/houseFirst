@@ -1,13 +1,17 @@
-import { Component }  from '@angular/core';
+import { Component, OnInit }  from '@angular/core';
+import { ITool } from './tool';
 
 @Component({
     selector: 'home-tools',
-    templateUrl: 'app/equip/tool-list.component.html'
-    //styleUrls: ['app/equip/tool-list.component.css']
+	//moduleId: module.id,
+    templateUrl: 'app/equip/tool-list.component.html',
+    styleUrls: ['app/shared/list.component.css']
+
 })
 export class ToolListComponent  {
     pageTitle: string = 'Tools List';
-    tools: any[] = [
+	listFilter: string ='';
+    tools: ITool[] = [
             {
 				id: 1,
 				item: 'Saw',
@@ -42,5 +46,14 @@ export class ToolListComponent  {
 
 
     ];
+
+	/*
+		toggleImage(): void {
+			this.showImage = !this.showImage;
+		}
+	*/ 
+	ngOnInit(): void {
+		console.log('In Oninit')
+	}
 
 }
