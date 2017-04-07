@@ -3,14 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-
+//start up
 import { AppComponent }  from './app.component';
+//Components
 // import { WelcomeComponent } from './startup/welcome.component';
+//import { YesNoComponent } from './shared/yesno.component';
+//common
+import { LocationListComponent } from './common/location-list.component';
+import { LocationFilterPipe } from  './common/location-filter.pipe';
 import { ManualListComponent } from './equip/manual-list.component';
+import { ManualFilterPipe } from './equip/manual-filter.pipe';
 import { ToolListComponent } from './equip/tool-list.component';
 import { ToolFilterPipe } from './equip/tool-filter.pipe';
-import { ManualFilterPipe } from './equip/manual-filter.pipe';
-import { YesNoComponent } from './shared/yesno.component';
+//Lobrary
+
+
 
 
 //import { AlertModule } from 'ng2-bootstrap';
@@ -48,8 +55,10 @@ function yn (value: number) {
     AppComponent,
   //  WelcomeComponent,
   //  YesNoComponent,
+    LocationListComponent, 
     ManualListComponent,
     ToolListComponent,
+    LocationFilterPipe,    
     ManualFilterPipe,
     ToolFilterPipe
 

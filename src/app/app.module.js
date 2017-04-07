@@ -9,12 +9,19 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
+//start up
 var app_component_1 = require("./app.component");
+//Components
 // import { WelcomeComponent } from './startup/welcome.component';
+//import { YesNoComponent } from './shared/yesno.component';
+//common
+var location_list_component_1 = require("./common/location-list.component");
+var location_filter_pipe_1 = require("./common/location-filter.pipe");
 var manual_list_component_1 = require("./equip/manual-list.component");
+var manual_filter_pipe_1 = require("./equip/manual-filter.pipe");
 var tool_list_component_1 = require("./equip/tool-list.component");
 var tool_filter_pipe_1 = require("./equip/tool-filter.pipe");
-var manual_filter_pipe_1 = require("./equip/manual-filter.pipe");
+//Lobrary
 //import { AlertModule } from 'ng2-bootstrap';
 //import { BsDropdownModule } from 'ng2-bootstrap';
 /* Feature Modules */
@@ -39,8 +46,10 @@ AppModule = __decorate([
             app_component_1.AppComponent,
             //  WelcomeComponent,
             //  YesNoComponent,
+            location_list_component_1.LocationListComponent,
             manual_list_component_1.ManualListComponent,
             tool_list_component_1.ToolListComponent,
+            location_filter_pipe_1.LocationFilterPipe,
             manual_filter_pipe_1.ManualFilterPipe,
             tool_filter_pipe_1.ToolFilterPipe
         ],

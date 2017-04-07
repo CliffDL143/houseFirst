@@ -1,0 +1,51 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">{{pageTitle}}</div>
+    <!-- Filter the Locations   -->
+    <div class='panel-body'>
+        <div class='row'>
+            <div class='col-md-2'>Filter by:</div>
+            <div class='col-md-4'>
+                <input type='text' [(ngModel)]='listFilter'  />
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-6'>
+                <h3>Filtered by: {{listFilter}} </h3>
+            </div>
+        </div>
+        <div class='table-responsive'>
+            <table class='table'
+                *ngIf='locations && locations.length'
+            >
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Location</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Area</th>
+                        <th>Active</th>  
+                        <th>In Use</th>    
+                        <th>Putaway To</th> 
+                        <th>Putaway From</th> 
+                        <th>Audited</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let location of locations | locationDescriptionFilter: listFilter'  > 
+                        <td>{{ location.id }} </td>
+                        <td>{{ location.location }} </td>
+                        <td>{{ location.defaultType }} </td>
+                        <td>{{ location.description }} </td>
+                        <td>{{ location.locationArea }} </td>    
+                        <td>{{ location.locationActive }} </td>
+                        <td>{{ location.locationInUse }} </td>
+                        <td>{{ location.locationPutawayTo }} </td>
+                        <td>{{ location.locationPutawayFrom }} </td>
+                        <td>{{ location.locationAudited }} </td>                                                                                                                             
+                    </tr>
+                </tbody>
+            </table>
+
+    </div>
+</div>
