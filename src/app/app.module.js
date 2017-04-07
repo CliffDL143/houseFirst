@@ -14,6 +14,7 @@ var app_component_1 = require("./app.component");
 //Components
 // import { WelcomeComponent } from './startup/welcome.component';
 //import { YesNoComponent } from './shared/yesno.component';
+//test
 //common
 var location_list_component_1 = require("./common/location-list.component");
 var location_filter_pipe_1 = require("./common/location-filter.pipe");
@@ -21,7 +22,9 @@ var manual_list_component_1 = require("./equip/manual-list.component");
 var manual_filter_pipe_1 = require("./equip/manual-filter.pipe");
 var tool_list_component_1 = require("./equip/tool-list.component");
 var tool_filter_pipe_1 = require("./equip/tool-filter.pipe");
-//Lobrary
+//Library
+/* Feature Modules */
+var product_module_1 = require("./products/product.module");
 //import { AlertModule } from 'ng2-bootstrap';
 //import { BsDropdownModule } from 'ng2-bootstrap';
 /* Feature Modules */
@@ -40,7 +43,17 @@ AppModule = __decorate([
         imports: [
             platform_browser_1.BrowserModule,
             forms_1.FormsModule,
-            http_1.HttpModule
+            http_1.HttpModule,
+            // [BsDropdownModule.forRoot([{dropdownMenu: DropdownMenu}] )],
+            // [AlertModule.forRoot()],
+            /*   RouterModule.forRoot([
+                 { path: 'welcome', component: WelcomeComponent },
+                 { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+                 { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
+           
+               ]),*/
+            // ManualModule
+            product_module_1.ProductModule
         ],
         declarations: [
             app_component_1.AppComponent,

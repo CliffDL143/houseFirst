@@ -1,5 +1,6 @@
 import { Component, OnInit }  from '@angular/core';
 import { ILocation } from './location';
+import { LocationService } from './location.service';
 
 @Component({
     selector: 'home-locations',
@@ -9,71 +10,17 @@ import { ILocation } from './location';
 })
 export class LocationListComponent implements OnInit {
     pageTitle: string = 'Locations List';
-    listFilter: string ='';
-    locations: ILocation[] = [
-            {
-                id: 1,
-                location: 'Desk3_F01',
-                defaultType: 'manual',
-                description: 'Network Stuff',
-                locationArea: 'WC',
-                locationActive: true,
-                locationInUse: true,
-                locationPutawayTo: true,
-                locationPutawayFrom: false,    
-                locationAudited: false
-            },
-             {
-                id: 2,
-                location: 'Desk3_F02',
-                defaultType: 'manual',
-                description: 'TV Stuff etc',
-                locationArea: 'WC',
-                locationActive: true,
-                locationInUse: true,
-                locationPutawayTo: true,
-                locationPutawayFrom: false,    
-                locationAudited: false,
-            }, 
-             {
-                id: 3,
-                location: 'Desk3_F03',
-                defaultType: 'manual',
-                description: 'Kitchen etc',
-                locationArea: 'WC',
-                locationActive: true,
-                locationInUse: true,
-                locationPutawayTo: true,
-                locationPutawayFrom: false,    
-                locationAudited: false,
-            },  
-             {
-                id: 4,
-                location: 'Car',
-                defaultType: 'any',
-                description: 'In Cars',
-                locationArea: 'Other',
-                locationActive: true,
-                locationInUse: true,
-                locationPutawayTo: false,
-                locationPutawayFrom: false,    
-                locationAudited: false,
-            }, 
-               {
-                id: 5,
-                location: 'Box M',
-                defaultType: 'any',
-                description: 'Manuals',
-                locationArea: 'WC',
-                locationActive: true,
-                locationInUse: true,
-                locationPutawayTo: false,
-                locationPutawayFrom: false,    
-                locationAudited: false,
-            }                               
-            
-    ];
+    listFilter: string;
+    errorMessage: string;
+
+    locations: ILocation[];
+
+    constructor(private _locationService: LocationService) {
+    }
+
     	ngOnInit(): void {
-		console.log('In Oninit')
+            this._locationService.getLocations()
+                .subscribe(locations => this.locations = locations,
+                    error => this.errorMessage = <any>error )
 	}
 }

@@ -8,6 +8,9 @@ import { AppComponent }  from './app.component';
 //Components
 // import { WelcomeComponent } from './startup/welcome.component';
 //import { YesNoComponent } from './shared/yesno.component';
+
+//test
+
 //common
 import { LocationListComponent } from './common/location-list.component';
 import { LocationFilterPipe } from  './common/location-filter.pipe';
@@ -15,9 +18,10 @@ import { ManualListComponent } from './equip/manual-list.component';
 import { ManualFilterPipe } from './equip/manual-filter.pipe';
 import { ToolListComponent } from './equip/tool-list.component';
 import { ToolFilterPipe } from './equip/tool-filter.pipe';
-//Lobrary
+//Library
 
-
+/* Feature Modules */
+import { ProductModule } from './products/product.module';
 
 
 //import { AlertModule } from 'ng2-bootstrap';
@@ -39,7 +43,7 @@ function yn (value: number) {
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
    // [BsDropdownModule.forRoot([{dropdownMenu: DropdownMenu}] )],
     // [AlertModule.forRoot()],
  /*   RouterModule.forRoot([
@@ -48,8 +52,9 @@ function yn (value: number) {
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
 
     ]),*/
-    //ProductModule,
+
    // ManualModule
+  ProductModule
   ],
   declarations: [
     AppComponent,

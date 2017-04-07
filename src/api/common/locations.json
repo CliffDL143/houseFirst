@@ -1,0 +1,63 @@
+[
+
+    {
+        "Id": 1,
+        "location": "Desk3_F01",
+        "defaultType": "manual",
+        "description": "Network Stuff",
+        "locationArea": "WC",
+        "locationActive": true,
+        "locationInUse": true,
+        "locationPutawayTo": true,
+        "locationPutawayFrom": false,    
+        "locationAudited": false
+    },
+    {
+        "Id": 2,
+        "location": "Desk3_F02",
+        "defaultType": "manual",
+        "description": "TV Stuff etc",
+        "locationArea": "WC",
+        "locationActive": true,
+        "locationInUse": true,
+        "locationPutawayTo": true,
+        "locationPutawayFrom": false,    
+        "locationAudited": false
+    },
+     {
+        "Id": 3,
+        "location": "Desk3_F03",
+        "defaultType": "manual",
+        "description": "Kitchen etc",
+        "locationArea": "WC",
+        "locationActive": true,
+        "locationInUse": true,
+        "locationPutawayTo": true,
+        "locationPutawayFrom": false,    
+        "locationAudited": false
+    },
+    {
+        "Id": 4,
+        "location": "Car",
+        "defaultType": "any",
+        "description": "In cars",
+        "locationArea": "WC",
+        "locationActive": true,
+        "locationInUse": true,
+        "locationPutawayTo": false,
+        "locationPutawayFrom": false,    
+        "locationAudited": false
+    },
+        {
+        "Id": 5,
+        "location": "Box M",
+        "defaultType": "any",
+        "description": "Manuals",
+        "locationArea": "WC",
+        "locationActive": true,
+        "locationInUse": true,
+        "locationPutawayTo": false,
+        "locationPutawayFrom": false,    
+        "locationAudited": false
+    }
+]

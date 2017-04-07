@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { LocationService } from './common/location.service'
+import { ManualService } from './equip/manual.service';
+import { ToolService } from './equip/tool.service';
 //import { HtmlDropdownComponent } from "./components/html-dropdown.component";
 
 
@@ -8,12 +11,17 @@ import { Component } from '@angular/core';
 
     template: `
         <div><h1>{{pageTitle}}</h1>
-        <home-locations></home-locations> 
-      
+            <home-tools></home-tools>
+
         </div>
 
-     `
-})
+     `,
+     providers: [ 
+         LocationService,
+         ManualService,
+         ToolService ]
+})  
+//          <home-products></home-products>
 //            <home-locations></home-locations>   
 //            <home-manuals></home-manuals>
  //           <home-tools></home-tools>  
