@@ -12,6 +12,7 @@ import { ILocation } from './location';
 @Injectable()
 export class LocationService {
     private _locationUrl = 'api/common/locations.json';
+ //   private _locationUrl = 'http://46.101.5.34/house1/testdata/locations.json';    
 
     constructor(private _http: Http) { }
     

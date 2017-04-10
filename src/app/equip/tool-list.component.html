@@ -1,7 +1,11 @@
 <div class="panel panel-primary">
-    <div class="panel-heading">{{pageTitle}}</div>
+    <div class="panel-heading">{{pageTitle}}    
+
+
+        
+    </div>
     <!-- Filter the Tools   -->
-    <div class='panel-body'>
+    <div class='panel-body'>   
         <div class='row'>
             <div class='col-md-2'>Filter by:</div>
             <div class='col-md-4'>
@@ -13,32 +17,79 @@
                 <h3>Filtered by: {{listFilter}} </h3>
             </div>
         </div>
+
+<!--
+        <div class='row'>
+            <div class='col-md-2'>Filter Item by:</div>
+            <div class='col-md-4'>
+                <input type='text' [(ngModel)]='listItemFilter' />
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-6'>
+                <h3>Filtered by: {{listItemFilter}} </h3>
+            </div>
+        </div>
+
+
+        <div class='row'>
+            <div class='col-md-2'>Filter Location by:</div>
+            <div class='col-md-4'>
+                <input type='text' [(ngModel)]='toolLocationFilter' />
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-6'>
+                <h3>Filtered Location by: {{toolLocationFilter}} </h3>
+            </div>
+        </div>
+-->
         <div class='table-responsive'>
             <table class='table'
                  *ngIf='tools && tools.length'               
             >
                 <thead>
                     <tr>
-                        <th>id</th>
+                        <th>         
+                            <button class='btn btn-primary'
+                                (click)='toggleImage()'>
+                                {{showImage ? 'Hide' : 'Show'}} Image
+                            </button>
+                        </th>
+                        <th>id</th> 
                         <th>Item</th>
                         <th>Location</th>
                         <th>Qty</th>
                         <th>Size</th>
                         <th>Part of Set</th>  
-                        <th>Date Bought</th>    
+                        <th>Date Bought</th>  
+                        <th>5 Star Rating</th>                          
                         <th>Comment</th>                                                   
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor='let tool of tools  | toolItemFilter: listFilter'>  
+                        <td>
+                            <img *ngIf='showImage'
+                                 [src]='tool.imageUrl'
+                                 [title]='tool.item | uppercase'
+                                 [style.width.px]='imageWidth' 
+                                 [style.margin.px]='imageMargin'>
+                        </td>
                         <td>{{ tool.id }} </td>
-                        <td>{{ tool.item }} </td>
-                        <td>{{ tool.location }}  </td>                      
-                        <td>{{ tool.qty }} </td>
-                        <td>{{ tool.size }} </td>
+                        <td> {{ tool.item }} </td>
+                        <td> {{ tool.location }}  </td>                      
+                        <td> {{ tool.qty }} </td>
+                        <td> {{ tool.size }} </td>
                         <td> {{ (tool.partOfSet) }} </td>
-                        <td>{{ tool.dateBought }}  </td>  
-                        <td>{{ tool.comment }}  </td>                                                                                                            
+                        <td> {{ tool.dateBought }}  </td>  
+                      <!--   <td>{{ tool.starRating }}  </td> -->
+                        <td>
+                            <home-star [rating]='tool.starRating'
+                                (ratingClicked)='onRatingClicked($event)'>   
+                            </home-star>
+                       </td>                        
+                        <td> {{ tool.comment }}  </td>                                                                                                           
                     </tr>
                 </tbody>
             </table>

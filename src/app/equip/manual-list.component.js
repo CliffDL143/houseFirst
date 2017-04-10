@@ -14,7 +14,7 @@ var ManualListComponent = (function () {
     function ManualListComponent(_manualService) {
         this._manualService = _manualService;
         this.pageTitle = 'Manuals List';
-        this.listFilter = '';
+        this.listFilter = 'CD';
     }
     ManualListComponent.prototype.ngOnInit = function () {
         var _this = this;

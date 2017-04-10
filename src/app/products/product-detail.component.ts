@@ -5,7 +5,7 @@ import { Subscription }       from 'rxjs/Subscription';
 
 import { IProduct } from './product';
 import { ProductService } from './product.service';
-
+/*
 @Component({
     templateUrl: 'app/products/product-detail.component.html'
 })
@@ -46,3 +46,4 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
         this.pageTitle = 'Product Detail: ' + message;
     }
 }
+*/

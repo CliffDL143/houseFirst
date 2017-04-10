@@ -15,6 +15,7 @@ require("rxjs/add/operator/catch");
 require("rxjs/add/operator/map");
 require("rxjs/add/observable/throw");
 var ToolService = (function () {
+    //   private _toolUrl = 'http://46.101.5.34/house1/testdata/tools.json';
     function ToolService(_http) {
         this._http = _http;
         this._toolUrl = 'api/equip/tools.json';

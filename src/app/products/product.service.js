@@ -16,6 +16,7 @@ require("rxjs/add/operator/catch");
 require("rxjs/add/operator/map");
 require("rxjs/add/observable/throw");
 var ProductService = (function () {
+    //   private _productUrl = 'http://46.101.5.34/house1/testdata/products.json';
     function ProductService(_http) {
         this._http = _http;
         this._productUrl = 'api/products/products.json';

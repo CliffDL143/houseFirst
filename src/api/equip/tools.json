@@ -1,13 +1,16 @@
 [
      {
         "id": 1,
-        "item": "Saw",
+        "item": "Fret Saw",
         "location": "Shed",
         "qty": 2,
         "size": "Medium",
         "partOfSet": -1,
         "dateBought": "2017-03-01",
-        "comment": "Spare blades"
+        "comment": "Spare blades",
+        "starRating": 2.5,
+        "imageUrl": 
+        "http://static.axminster.co.uk/media/catalog/product/cache/1/image/920x/9df78eab33525d08d6e5fb8d27136e95/9/5/950971_xl.jpg"
     },
       {
         "id": 2,
@@ -17,7 +20,9 @@
         "size": "Large",
         "partOfSet": 0,
         "dateBought": "2016-03-01",
-        "comment": ""
+        "comment": "",
+        "starRating": 5,
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/224824/farmer-garden-fork.png"
     },   
     {
         "id": 3,
@@ -27,6 +32,8 @@
         "size": "Various",
         "partOfSet": -1,
         "dateBought": "2015-03-01",
-        "comment": "Drop forge"
+        "comment": "Drop forge",
+        "starRating": 4.5,       
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/109669/spanners-icon.png"
     }
 ]

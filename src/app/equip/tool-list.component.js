@@ -15,11 +15,22 @@ var ToolListComponent = (function () {
         this._toolService = _toolService;
         this.pageTitle = 'Tools List';
         this.listFilter = '';
+        this.listItemFilter = 'Fork';
+        this.toolLocationFilter = 'Shed';
+        this.imageWidth = 50;
+        this.imageMargin = 2;
+        this.showImage = false;
     }
+    ToolListComponent.prototype.toggleImage = function () {
+        this.showImage = !this.showImage;
+    };
     ToolListComponent.prototype.ngOnInit = function () {
         var _this = this;
         this._toolService.getTools()
             .subscribe(function (tools) { return _this.tools = tools; }, function (error) { return _this.errorMessage = error; });
+    };
+    ToolListComponent.prototype.onRatingClicked = function (message) {
+        this.pageTitle = 'Tools List: ' + message;
     };
     return ToolListComponent;
 }());

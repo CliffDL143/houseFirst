@@ -9,6 +9,7 @@ var core_1 = require("@angular/core");
 var location_service_1 = require("./common/location.service");
 var manual_service_1 = require("./equip/manual.service");
 var tool_service_1 = require("./equip/tool.service");
+var product_service_1 = require("./products/product.service");
 //import { HtmlDropdownComponent } from "./components/html-dropdown.component";
 var AppComponent = (function () {
     function AppComponent() {
@@ -19,11 +20,12 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'home-app',
-        template: "\n        <div><h1>{{pageTitle}}</h1>\n            <home-tools></home-tools>\n\n        </div>\n\n     ",
+        template: "\n        <div><h1>{{pageTitle}}</h1>\n        <home-products></home-products>\n        <home-tools></home-tools>  \n        <home-manuals></home-manuals>\n        <home-locations></home-locations>\n        </div>\n\n     ",
         providers: [
             location_service_1.LocationService,
             manual_service_1.ManualService,
-            tool_service_1.ToolService
+            tool_service_1.ToolService,
+            product_service_1.ProductService
         ]
     })
 ], AppComponent);

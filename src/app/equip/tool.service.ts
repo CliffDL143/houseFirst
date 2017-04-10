@@ -12,7 +12,7 @@ import { ITool} from './tool';
 @Injectable()
 export class ToolService {
     private _toolUrl = 'api/equip/tools.json';
-
+ //   private _toolUrl = 'http://46.101.5.34/house1/testdata/tools.json';
     constructor(private _http: Http) { }
     
     getTools(): Observable<ITool[]> {

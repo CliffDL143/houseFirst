@@ -11,15 +11,29 @@ import { ToolService } from './tool.service';
 export class ToolListComponent  {
     pageTitle: string = 'Tools List';
 	listFilter: string ='';
+    listItemFilter: string = 'Fork';
+    toolLocationFilter: string = 'Shed';
+    imageWidth: number = 50;
+    imageMargin: number = 2;
+    showImage: boolean = false;
     errorMessage: string;
     tools: ITool[] ;
  
         constructor(private _toolService: ToolService) {
     }
+
+        toggleImage(): void {
+        this.showImage = !this.showImage;
+    }
+
 	ngOnInit(): void {
             this._toolService.getTools()
                 .subscribe(tools => this.tools = tools,
                     error => this.errorMessage = <any>error )
 	}
+
+        onRatingClicked(message: string): void {
+        this.pageTitle = 'Tools List: ' + message;
+    }
 
 }

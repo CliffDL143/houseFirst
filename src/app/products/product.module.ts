@@ -9,7 +9,7 @@ import { ProductFilterPipe } from './product-filter.pipe';
 import { ProductService } from './product.service';
 
 import { SharedModule } from '../shared/shared.module';
-
+/*
 @NgModule({
   imports: [
     SharedModule,
@@ -31,4 +31,4 @@ import { SharedModule } from '../shared/shared.module';
     ProductDetailGuard
   ]
 })
-export class ProductModule {}
+export class ProductModule {}*/

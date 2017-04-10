@@ -15,6 +15,7 @@ require("rxjs/add/operator/catch");
 require("rxjs/add/operator/map");
 require("rxjs/add/observable/throw");
 var LocationService = (function () {
+    //   private _locationUrl = 'http://46.101.5.34/house1/testdata/locations.json';    
     function LocationService(_http) {
         this._http = _http;
         this._locationUrl = 'api/common/locations.json';

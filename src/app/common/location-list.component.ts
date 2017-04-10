@@ -10,7 +10,7 @@ import { LocationService } from './location.service';
 })
 export class LocationListComponent implements OnInit {
     pageTitle: string = 'Locations List';
-    listFilter: string;
+    listFilter: string = 'TV';
     errorMessage: string;
 
     locations: ILocation[];

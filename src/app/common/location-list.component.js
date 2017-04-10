@@ -14,6 +14,7 @@ var LocationListComponent = (function () {
     function LocationListComponent(_locationService) {
         this._locationService = _locationService;
         this.pageTitle = 'Locations List';
+        this.listFilter = 'TV';
     }
     LocationListComponent.prototype.ngOnInit = function () {
         var _this = this;

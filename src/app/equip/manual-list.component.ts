@@ -10,7 +10,7 @@ import { ManualService } from './manual.service';
 })
 export class ManualListComponent implements OnInit {
     pageTitle: string = 'Manuals List';
-    listFilter: string ='';
+    listFilter: string ='CD';
     errorMessage: string;
     manuals: IManual[];
 
