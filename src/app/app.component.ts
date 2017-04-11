@@ -12,13 +12,24 @@ import { ProductService } from './products/product.service';
     selector: 'home-app',
 
     template: `
-        <div><h1>{{pageTitle}}</h1>
-        <home-products></home-products>
-        <home-tools></home-tools>  
-        <home-manuals></home-manuals>
-        <home-locations></home-locations>
+        <div>
+             <nav class='navbar navbar-default'>
+                <div class='container-fluid'>
+                    <a class='navbar-brand' >{{pageTitle}}</a>
+                    <ul class='nav navbar-nav'>
+                        <li><a [routerLink] = "['/welcome']">Home</a></li>
+                        <li><a [routerLink] = "['/tools']">Tools</a></li>
+                          <li><a [routerLink] = "['/manuals']">Manuals</a></li>   
+                         <li><a [routerLink] = "['/locations']">Locations</a></li>                                            
+                        <li><a>Equipment</a></li>   
+                        <li><a  [routerLink] = "['/products']">Product</a></li>                     
+                    </ul>
+                </div>
+             </nav>
+             <div class='container'>
+                <router-outlet></router-outlet>
+            </div>
         </div>
-
      `,
      providers: [ 
          LocationService,

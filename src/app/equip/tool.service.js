@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
+var Observable_1 = require("rxjs/Observable");
 require("rxjs/add/operator/do");
 require("rxjs/add/operator/catch");
 require("rxjs/add/operator/map");
@@ -25,6 +26,16 @@ var ToolService = (function () {
             .map(function (response) { return response.json(); });
         //   .do(data => console.log('All: ' + JSON.stringify(data)))
         //   .catch( this.handleError );
+    };
+    ToolService.prototype.getTool = function (id) {
+        return this.getTools()
+            .map(function (tools) { return tools.find(function (t) { return t.toolId === id; }); });
+    };
+    ToolService.prototype.handleError = function (error) {
+        // in a real world app, we may send the server to some remote logging infrastructure
+        // instead of just logging it to the console
+        console.error(error);
+        return Observable_1.Observable.throw(error.json().error || 'Server error');
     };
     return ToolService;
 }());

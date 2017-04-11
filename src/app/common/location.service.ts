@@ -20,7 +20,17 @@ export class LocationService {
         return this._http.get(this._locationUrl)
             .map((response: Response) => <ILocation[]> response.json())
          //   .do(data => console.log('All: ' + JSON.stringify(data)))
-         //   .catch( this.handleError );
+            .catch( this.handleError );
+    }
+
+    getLocation(id: number): Observable<ILocation> {
+        return this.getLocations()
+            .map((locations: ILocation[]) => locations.find(l => l.locationId === id))
+    }
+
+    private handleError(error: Response) {
+        console.error(error);
+        return Observable.throw(error.json().error || 'Server Error')
     }
 
 }

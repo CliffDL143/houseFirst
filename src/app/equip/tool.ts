@@ -1,6 +1,6 @@
 /* Defines the tool entity */
 export interface ITool {
-    id: number;
+    toolId: number;
     item: string;
     location: string;
 	qty: number;

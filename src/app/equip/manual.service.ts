@@ -22,4 +22,13 @@ export class ManualService {
          //   .catch( this.handleError );
     }
 
+    getManual(id: number): Observable<IManual> {
+        return this.getManuals()
+            .map((manuals: IManual[]) => manuals.find(m => m.manualId === id))
+    }
+
+    private handleError(error: Response) {
+        console.error(error);
+        return Observable.throw(error.json().error || 'Server Error')
+    }
 }

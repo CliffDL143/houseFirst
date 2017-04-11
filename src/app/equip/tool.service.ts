@@ -22,4 +22,20 @@ export class ToolService {
          //   .catch( this.handleError );
     }
 
+    getTool(id: number): Observable<ITool> {
+        return this.getTools()
+            .map((tools: ITool[]) => tools.find(t => t.toolId === id))
+    }
+
+    
+
+    private handleError(error: Response) {
+        // in a real world app, we may send the server to some remote logging infrastructure
+        // instead of just logging it to the console
+        console.error(error);
+        return Observable.throw(error.json().error || 'Server error');
+    }
+
 }
+
+

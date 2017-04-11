@@ -6,20 +6,24 @@ import { RouterModule } from '@angular/router';
 //start up
 import { AppComponent }  from './app.component';
 //Components
-// import { WelcomeComponent } from './startup/welcome.component';
+ import { WelcomeComponent } from './startup/welcome.component';
 //import { YesNoComponent } from './shared/yesno.component';
 
 //test
 import { ProductListComponent } from './products/product-list.component';
+import { ProductDetailComponent } from './products/product-detail.component';
 import { ProductFilterPipe } from './products/product-filter.pipe';
 //common
 import { StarComponent } from './shared/star.component';
 //Library
 import { LocationListComponent } from './common/location-list.component';
+import { LocationDetailComponent } from './common/location-detail.component';
 import { LocationFilterPipe } from  './common/location-filter.pipe';
 import { ManualListComponent } from './equip/manual-list.component';
+import { ManualDetailComponent } from './equip/manual-detail.component';
 import { ManualFilterPipe } from './equip/manual-filter.pipe';
 import { ToolListComponent } from './equip/tool-list.component';
+import { ToolDetailComponent } from './equip/tool-detail.component';
 import { ToolFilterPipe } from './equip/tool-filter.pipe';
 import { ToolFilterItemPipe } from './equip/tool-filteritem.pipe';
 import { ToolFilterLocationPipe } from './equip/tool-filterlocation.pipe';
@@ -42,34 +46,49 @@ function yn (value: number) {
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
    // [BsDropdownModule.forRoot([{dropdownMenu: DropdownMenu}] )],
-    // [AlertModule.forRoot()],
- /*   RouterModule.forRoot([
-      { path: 'welcome', component: WelcomeComponent },
+    // [AlertModule.forRoot()]
+   // ManualModule
+  // ProductModule
+    RouterModule.forRoot([ 
+      { path: 'products', component: ProductListComponent },  
+      { path: 'product/:id', component: ProductDetailComponent }, 
+      { path: 'locations', component: LocationListComponent },  
+      { path: 'location/:id', component: LocationDetailComponent },       
+      { path: 'tools', component: ToolListComponent },  
+      { path: 'tool/:id', component: ToolDetailComponent }, 
+      { path: 'manuals', component: ManualListComponent },  
+      { path: 'manual/:id', component: ManualDetailComponent },      
+      { path: 'welcome', component: WelcomeComponent },      
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
 
-    ]),*/
-
-   // ManualModule
- // ProductModule
-  
+    ], { useHash: false }),
+ 
   ],
   declarations: [
     AppComponent,
-  //  WelcomeComponent,
+    WelcomeComponent,
   //  YesNoComponent,
     ProductListComponent,
+    ProductDetailComponent,
     ProductFilterPipe,
+
     LocationListComponent, 
+    LocationDetailComponent,   
+    LocationFilterPipe,
+
     ManualListComponent,
-    ToolListComponent,
-    LocationFilterPipe,    
+    ManualDetailComponent,    
     ManualFilterPipe,
+
+    ToolListComponent,
+    ToolDetailComponent, 
     ToolFilterPipe,
     ToolFilterItemPipe,
     ToolFilterLocationPipe,
+
     StarComponent
   ],
   bootstrap: [ AppComponent ]

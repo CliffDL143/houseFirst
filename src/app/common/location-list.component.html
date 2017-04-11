@@ -33,7 +33,8 @@
                 </thead>
                 <tbody>
                     <tr *ngFor='let location of locations | locationDescriptionFilter: listFilter'  > 
-                        <td>{{ location.id }} </td>
+                        <td>{{ location.locationId }} </td>
+                        <td><a [routerLink]="['/location', location.locationId]">{{ location.location }}</a> </td>
                         <td>{{ location.location }} </td>
                         <td>{{ location.defaultType }} </td>
                         <td>{{ location.description }} </td>

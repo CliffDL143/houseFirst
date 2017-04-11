@@ -1,6 +1,6 @@
 /* Defines the manual entity */
 export interface IManual {
-    id: number;
+    manualId: number;
     fileDate: string;
     itemDescription: string;
     itemModel: string;

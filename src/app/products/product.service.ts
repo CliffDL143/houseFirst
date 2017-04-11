@@ -11,15 +11,15 @@ import { IProduct } from './product';
 
 @Injectable()
 export class ProductService {
-    private _productUrl = 'api/products/products.json';
- //   private _productUrl = 'http://46.101.5.34/house1/testdata/products.json';
+   private _productUrl = 'api/products/products.json';
+   // public _productUrl = 'http://46.101.5.34/house1/testdata/products.json';
 
     constructor(private _http: Http) { }
 
     getProducts(): Observable<IProduct[]> {
         return this._http.get(this._productUrl)
             .map((response: Response) => <IProduct[]> response.json())
-            .do(data => console.log('All: ' +  JSON.stringify(data)))
+            //.do(data => console.log('All: ' +  JSON.stringify(data)))
             .catch(this.handleError);
     }
 

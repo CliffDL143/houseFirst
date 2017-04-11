@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
+var Observable_1 = require("rxjs/Observable");
 require("rxjs/add/operator/do");
 require("rxjs/add/operator/catch");
 require("rxjs/add/operator/map");
@@ -22,9 +23,16 @@ var LocationService = (function () {
     }
     LocationService.prototype.getLocations = function () {
         return this._http.get(this._locationUrl)
-            .map(function (response) { return response.json(); });
-        //   .do(data => console.log('All: ' + JSON.stringify(data)))
-        //   .catch( this.handleError );
+            .map(function (response) { return response.json(); })
+            .catch(this.handleError);
+    };
+    LocationService.prototype.getLocation = function (id) {
+        return this.getLocations()
+            .map(function (locations) { return locations.find(function (l) { return l.locationId === id; }); });
+    };
+    LocationService.prototype.handleError = function (error) {
+        console.error(error);
+        return Observable_1.Observable.throw(error.json().error || 'Server Error');
     };
     return LocationService;
 }());

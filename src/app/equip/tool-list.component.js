@@ -36,7 +36,7 @@ var ToolListComponent = (function () {
 }());
 ToolListComponent = __decorate([
     core_1.Component({
-        selector: 'home-tools',
+        // selector: 'home-tools',
         //moduleId: module.id,
         templateUrl: 'app/equip/tool-list.component.html',
         styleUrls: ['app/shared/list.component.css']

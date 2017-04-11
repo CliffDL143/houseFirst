@@ -34,7 +34,7 @@ var ProductListComponent = (function () {
 }());
 ProductListComponent = __decorate([
     core_1.Component({
-        selector: 'home-products',
+        // selector: 'home-products',
         templateUrl: 'app/products/product-list.component.html',
         styleUrls: ['app/products/product-list.component.css']
     }),

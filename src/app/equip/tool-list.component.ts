@@ -2,7 +2,7 @@ import { Component, OnInit }  from '@angular/core';
 import { ITool } from './tool';
 import { ToolService } from './tool.service';
 @Component({
-    selector: 'home-tools',
+   // selector: 'home-tools',
 	//moduleId: module.id,
     templateUrl: 'app/equip/tool-list.component.html',
     styleUrls: ['app/shared/list.component.css']

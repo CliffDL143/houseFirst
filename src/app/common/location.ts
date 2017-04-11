@@ -1,6 +1,6 @@
 /* Defines the manual entity */
 export interface ILocation {
-    id: number;
+    locationId: number;
     location: string;
     defaultType: string;
     description: string;

@@ -76,14 +76,18 @@
                                  [style.width.px]='imageWidth' 
                                  [style.margin.px]='imageMargin'>
                         </td>
-                        <td>{{ tool.id }} </td>
-                        <td> {{ tool.item }} </td>
+                        <td>{{ tool.toolId }} </td>
+                        <td><a [routerLink]="['/tool', tool.toolId]">{{ tool.item }}</a> </td>
                         <td> {{ tool.location }}  </td>                      
                         <td> {{ tool.qty }} </td>
                         <td> {{ tool.size }} </td>
                         <td> {{ (tool.partOfSet) }} </td>
                         <td> {{ tool.dateBought }}  </td>  
-                      <!--   <td>{{ tool.starRating }}  </td> -->
+                      <!--   <td>{{ tool.starRating }}  </td> 
+
+                      [routerLink]="['/tool', tool.toolId]"
+                      
+                      -->
                         <td>
                             <home-star [rating]='tool.starRating'
                                 (ratingClicked)='onRatingClicked($event)'>   

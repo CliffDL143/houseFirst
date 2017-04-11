@@ -31,9 +31,9 @@
                 </thead>
                 <tbody>
                     <tr *ngFor='let manual of manuals | manualDescriptionFilter: listFilter'  > 
-                        <td>{{ manual.id }} </td>
+                        <td>{{ manual.manualId }} </td>
                         <td>{{ manual.fileDate }} </td>
-                        <td>{{ manual.itemDescription }}  </td>                      
+                        <td><a [routerLink]="['/manual', manual.manualId]">{{ manual.itemDescription }} </a> </td>                      
                         <td>{{ manual.itemModel }} </td>
                         <td>{{ manual.itemManufacturer }} </td>
                         <td>{{ manual.fileLocation }} </td>

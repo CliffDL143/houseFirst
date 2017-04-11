@@ -16,7 +16,7 @@ require("rxjs/add/operator/catch");
 require("rxjs/add/operator/map");
 require("rxjs/add/observable/throw");
 var ProductService = (function () {
-    //   private _productUrl = 'http://46.101.5.34/house1/testdata/products.json';
+    // public _productUrl = 'http://46.101.5.34/house1/testdata/products.json';
     function ProductService(_http) {
         this._http = _http;
         this._productUrl = 'api/products/products.json';
@@ -24,7 +24,6 @@ var ProductService = (function () {
     ProductService.prototype.getProducts = function () {
         return this._http.get(this._productUrl)
             .map(function (response) { return response.json(); })
-            .do(function (data) { return console.log('All: ' + JSON.stringify(data)); })
             .catch(this.handleError);
     };
     ProductService.prototype.getProduct = function (id) {

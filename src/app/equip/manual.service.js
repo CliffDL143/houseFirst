@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
+var Observable_1 = require("rxjs/Observable");
 require("rxjs/add/operator/do");
 require("rxjs/add/operator/catch");
 require("rxjs/add/operator/map");
@@ -24,6 +25,14 @@ var ManualService = (function () {
             .map(function (response) { return response.json(); });
         //   .do(data => console.log('All: ' + JSON.stringify(data)))
         //   .catch( this.handleError );
+    };
+    ManualService.prototype.getManual = function (id) {
+        return this.getManuals()
+            .map(function (manuals) { return manuals.find(function (m) { return m.manualId === id; }); });
+    };
+    ManualService.prototype.handleError = function (error) {
+        console.error(error);
+        return Observable_1.Observable.throw(error.json().error || 'Server Error');
     };
     return ManualService;
 }());
