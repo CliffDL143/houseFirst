@@ -1,15 +1,43 @@
 <div class='panel panel-primary' *ngIf='manual'>
     <div class='panel-heading' style='font-size:large'>
-        {{pageTitle}}
+        {{pageTitle  + ' ' + manual.itemDescription}} 
     </div>
 
     <div class='panel-body'>
-
-
-
-
-
-
+        <div class='col-md-12'>
+            <div class='row'>
+                <div class='col-md-3'>Date:</div>
+                <div class='col-md-6'>{{ manual.fileDate }}</div>
+            </div>    
+            <div class='row'>
+                <div class='col-md-3'>Description:</div>
+                <div class='col-md-6'>{{ manual.itemDescription }}</div>
+            </div>                    
+            <div class='row'>
+                <div class='col-md-3'>Item Model:</div>
+                <div class='col-md-6'>{{ manual.itemModel }}</div>
+            </div> 
+            <div class='row'>
+                <div class='col-md-3'>Manufacturer:</div>
+                <div class='col-md-6'>{{ manual.itemManufacturer }}</div>
+            </div> 
+            <div class='row'>
+                <div class='col-md-3'>Location:</div>
+                <div class='col-md-6'>{{ manual.fileLocation }}</div>
+            </div>   
+            <div class='row'>
+                <div class='col-md-3'>Location:</div>
+                <div class='col-md-6'>{{ manual.fileLocation }}</div>
+            </div>   
+             <div class='row'>
+                <div class='col-md-3'>Used:</div>
+                <div class='col-md-6'>{{ manual.equipLocation }}</div>
+            </div>  
+            <div class='row'>
+                <div class='col-md-3'>Model Url:</div>
+                <div class='col-md-9'><a href="{{ manual.modelUrl}}">{{ manual.modelUrl}}</a></div>
+            </div>                                                    
+        </div>
     </div>
     <div class='panel-footer'>
         <a class='btn btn-default' (click)='onBack()' style='width:80px'>

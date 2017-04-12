@@ -22,6 +22,7 @@ var ManualDetailComponent = (function () {
         var _this = this;
         this.sub = this._route.params.subscribe(function (params) {
             var id = +params['id'];
+            _this.pageTitle += ": " + id;
             _this.getManual(id);
         });
     };

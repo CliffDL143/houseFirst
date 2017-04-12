@@ -1,15 +1,50 @@
 <div class='panel panel-primary' *ngIf='tool'>
     <div class='panel-heading' style='font-size:large'>
-        {{pageTitle}}
+            {{ pageTitle + '  ' + tool.item }}
     </div>
 
     <div class='panel-body'>
+        <div class='row'>
+            <div class='col-md-6'>
+                <img class='center-block img-responsive' 
+                     [style.width.px]='200' 
+                     [style.margin.px]='2' 
+                     [src]='tool.imageUrl'
+                     [title]='tool.item'>
+            </div>
+             <div class='col-md-6'>
+                <div class='row'>
+                    <div class='col-md-3'>Item:</div>
+                    <div class='col-md-6'>{{tool.item}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Stored:</div>
+                    <div class='col-md-6'>{{tool.location}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Quantity:</div>
+                    <div class='col-md-6'>{{tool.qty}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Size:</div>
+                    <div class='col-md-6'>{{tool.size}}</div>
+                </div>
+                 <div class='row'>
+                    <div class='col-md-3'>Set:</div>
+                    <div class='col-md-6'>{{tool.partOfSet}}</div>
+                </div>  
+                  <div class='row'>
+                    <div class='col-md-3'>Date:</div>
+                    <div class='col-md-6'>{{tool.dateBought}}</div>
+                </div>   
+                   <div class='row'>
+                    <div class='col-md-3'>Comment:</div>
+                    <div class='col-md-6'>{{tool.comment}}</div>
+                </div>                                           
+			</div>
 
 
-
-
-
-
+        </div>   
     </div>
     <div class='panel-footer'>
         <a class='btn btn-default' (click)='onBack()' style='width:80px'>

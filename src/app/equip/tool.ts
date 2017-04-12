@@ -8,6 +8,5 @@ export interface ITool {
     partOfSet: number;
     dateBought: string;
     comment: string;
-    starRating: number;
     imageUrl: string;
 }

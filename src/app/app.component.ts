@@ -1,13 +1,6 @@
 import { Component } from '@angular/core';
 
-import { LocationService } from './common/location.service';
-import { ManualService } from './equip/manual.service';
-import { ToolService } from './equip/tool.service';
-import { ProductService } from './products/product.service';
 //import { HtmlDropdownComponent } from "./components/html-dropdown.component";
-
-
-
 @Component({
     selector: 'home-app',
 
@@ -19,9 +12,17 @@ import { ProductService } from './products/product.service';
                     <ul class='nav navbar-nav'>
                         <li><a [routerLink] = "['/welcome']">Home</a></li>
                         <li><a [routerLink] = "['/tools']">Tools</a></li>
-                          <li><a [routerLink] = "['/manuals']">Manuals</a></li>   
-                         <li><a [routerLink] = "['/locations']">Locations</a></li>                                            
-                        <li><a>Equipment</a></li>   
+                        <li><a [routerLink] = "['/manuals']">Manuals</a></li>   
+                        <li><a [routerLink] = "['/locations']">Locations</a></li>                                            
+                        <li class="dropdown"><a  class="dropdown-toggle"
+                            data-toggle="dropdown" datahover="dropdown" data-close-others="true"
+                            ><h4>Equipment</h4> <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a [routerLink] = "['/tools']">Tools</a></li>  
+                                <li><a [routerLink] = "['/manuals']">Manuals</a></li>                                                      
+                            </ul>
+
+                        </li>   
                         <li><a  [routerLink] = "['/products']">Product</a></li>                     
                     </ul>
                 </div>
@@ -30,20 +31,11 @@ import { ProductService } from './products/product.service';
                 <router-outlet></router-outlet>
             </div>
         </div>
-     `,
-     providers: [ 
-         LocationService,
-         ManualService,
-         ToolService,
-         ProductService ]
-})  
-//          <home-products></home-products>
-//            <home-locations></home-locations>   
-//            <home-manuals></home-manuals>
- //           <home-tools></home-tools>  
+     `
 
+})  
 export class AppComponent {
-    pageTitle: string = 'Cliff Home Management';
+    pageTitle: string = 'Home Management';
 }
 
 /*  

@@ -63,7 +63,6 @@
                         <th>Size</th>
                         <th>Part of Set</th>  
                         <th>Date Bought</th>  
-                        <th>5 Star Rating</th>                          
                         <th>Comment</th>                                                   
                     </tr>
                 </thead>
@@ -82,17 +81,7 @@
                         <td> {{ tool.qty }} </td>
                         <td> {{ tool.size }} </td>
                         <td> {{ (tool.partOfSet) }} </td>
-                        <td> {{ tool.dateBought }}  </td>  
-                      <!--   <td>{{ tool.starRating }}  </td> 
-
-                      [routerLink]="['/tool', tool.toolId]"
-                      
-                      -->
-                        <td>
-                            <home-star [rating]='tool.starRating'
-                                (ratingClicked)='onRatingClicked($event)'>   
-                            </home-star>
-                       </td>                        
+                        <td> {{ tool.dateBought }}  </td>                       
                         <td> {{ tool.comment }}  </td>                                                                                                           
                     </tr>
                 </tbody>

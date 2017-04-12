@@ -26,6 +26,7 @@ export class ManualDetailComponent implements OnInit, OnDestroy {
         this.sub = this._route.params.subscribe(
             params => {
                 let id = +params['id'];
+                this.pageTitle += `: ${id}`;                
                 this.getManual(id);
         });
     }

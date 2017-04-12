@@ -1,4 +1,4 @@
-/* Defines the manual entity */
+/* Defines the location entity */
 export interface ILocation {
     locationId: number;
     location: string;

@@ -1,9 +1,50 @@
 <div class='panel panel-primary' *ngIf='location'>
     <div class='panel-heading' style='font-size:large'>
-        {{pageTitle}}
+        {{pageTitle + '    ' + location.location}}
     </div>
 
     <div class='panel-body'>
+            <div class='col-md-6'>
+                  <div class='row'>
+                    <div class='col-md-4'>Area:</div>
+                    <div class='col-md-6'>{{location.locationArea}}</div>
+                </div>                
+                <div class='row'>
+                    <div class='col-md-4'>Item:</div>
+                    <div class='col-md-6'>{{location.location}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-4'>Description:</div>
+                    <div class='col-md-6'>{{location.description}}</div>
+                </div>
+                 <div class='row'>
+                    <div class='col-md-4'>Default Type:</div>
+                    <div class='col-md-6'>{{location.defaultType}}</div>
+                </div>               
+            </div>
+            <div class='col-md-6'>
+                <div class='row'>
+                    <div class='col-md-4'>Active:</div>
+                    <div class='col-md-3'>{{location.locationActive}}</div>
+                </div>
+                 <div class='row'>
+                    <div class='col-md-4'>In Use:</div>
+                    <div class='col-md-3'>{{location.locationInUse}}</div>
+                </div>
+                 <div class='row'>
+                    <div class='col-md-4'>Put Away to:</div>
+                    <div class='col-md-3'>{{location.locationPutawayTo}}</div>
+                </div>
+                 <div class='row'>
+                    <div class='col-md-4'>Put Away from:</div>
+                    <div class='col-md-3'>{{location.locationPutawayFrom}}</div>
+                </div>
+                 <div class='row'>
+                    <div class='col-md-4'>Audited:</div>
+                    <div class='col-md-3'>{{location.locationAudited}}</div>
+                </div>                                                            
+            </div>
+
 
 
 

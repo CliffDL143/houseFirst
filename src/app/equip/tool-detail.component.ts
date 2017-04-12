@@ -24,6 +24,7 @@ export class ToolDetailComponent implements OnInit, OnDestroy {
         this.sub = this._route.params.subscribe(
             params => {
                 let id = +params['id'];
+                this.pageTitle += `: ${id}`;               
                 this.getTool(id);
         });
     }

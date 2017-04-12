@@ -6,27 +6,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var location_service_1 = require("./common/location.service");
-var manual_service_1 = require("./equip/manual.service");
-var tool_service_1 = require("./equip/tool.service");
-var product_service_1 = require("./products/product.service");
 //import { HtmlDropdownComponent } from "./components/html-dropdown.component";
 var AppComponent = (function () {
     function AppComponent() {
-        this.pageTitle = 'Cliff Home Management';
+        this.pageTitle = 'Home Management';
     }
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'home-app',
-        template: "\n        <div>\n             <nav class='navbar navbar-default'>\n                <div class='container-fluid'>\n                    <a class='navbar-brand' >{{pageTitle}}</a>\n                    <ul class='nav navbar-nav'>\n                        <li><a [routerLink] = \"['/welcome']\">Home</a></li>\n                        <li><a [routerLink] = \"['/tools']\">Tools</a></li>\n                          <li><a [routerLink] = \"['/manuals']\">Manuals</a></li>   \n                         <li><a [routerLink] = \"['/locations']\">Locations</a></li>                                            \n                        <li><a>Equipment</a></li>   \n                        <li><a  [routerLink] = \"['/products']\">Product</a></li>                     \n                    </ul>\n                </div>\n             </nav>\n             <div class='container'>\n                <router-outlet></router-outlet>\n            </div>\n        </div>\n     ",
-        providers: [
-            location_service_1.LocationService,
-            manual_service_1.ManualService,
-            tool_service_1.ToolService,
-            product_service_1.ProductService
-        ]
+        template: "\n        <div>\n             <nav class='navbar navbar-default'>\n                <div class='container-fluid'>\n                    <a class='navbar-brand' >{{pageTitle}}</a>\n                    <ul class='nav navbar-nav'>\n                        <li><a [routerLink] = \"['/welcome']\">Home</a></li>\n                        <li><a [routerLink] = \"['/tools']\">Tools</a></li>\n                        <li><a [routerLink] = \"['/manuals']\">Manuals</a></li>   \n                        <li><a [routerLink] = \"['/locations']\">Locations</a></li>                                            \n                        <li class=\"dropdown\"><a  class=\"dropdown-toggle\"\n                            data-toggle=\"dropdown\" datahover=\"dropdown\" data-close-others=\"true\"\n                            ><h4>Equipment</h4> <b class=\"caret\"></b></a>\n                            <ul class=\"dropdown-menu\">\n                                <li><a [routerLink] = \"['/tools']\">Tools</a></li>  \n                                <li><a [routerLink] = \"['/manuals']\">Manuals</a></li>                                                      \n                            </ul>\n\n                        </li>   \n                        <li><a  [routerLink] = \"['/products']\">Product</a></li>                     \n                    </ul>\n                </div>\n             </nav>\n             <div class='container'>\n                <router-outlet></router-outlet>\n            </div>\n        </div>\n     "
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
